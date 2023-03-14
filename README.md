@@ -40,6 +40,8 @@ Glue code could be
 
 ### Python
 
+This glue code defines three functions (`$vizText`, `$vizGrid`, `$vizPlot`).
+
     source src/aaa.py
     set print elements unlimited
 
@@ -47,4 +49,16 @@ Glue code could be
 
 ### Ada
 
-TBD
+This Python script defines `$vizCall` function to call glue code
+in defined in Ada. It accepts function name and its argument.
+This will find a global function with given name
+and call it with given argument. The Ada function
+should return String. The result will be converted
+to plain Python string with escape characters stripped.
+Ada function should have `External_Name` to be called from
+`minimal` language:
+
+    source src/bbb.py
+    set print elements unlimited
+
+    --language minimal $vizCall("something", 1)
