@@ -1,0 +1,8 @@
+project Aaa is
+   for Object_Dir use ".obj";
+   for Main use ("aaa.adb");
+   for Source_Dirs use ("src");
+   package Compiler is
+      for Default_Switches ("ada") use ("-g");
+   end Compiler;
+end Aaa;

@@ -1,0 +1,10 @@
+{
+    "plantuml.server": "https://www.plantuml.com/plantuml",
+    "plantuml.render": "PlantUMLServer",
+    "debugVisualizer.debugAdapterConfigurations": {
+        "gdb":{
+            "context": "watch",
+            "expressionTemplate": "${expr}"
+        }
+    },
+}
